@@ -25,9 +25,9 @@ WHILE TRUE
 WEND
 
 PROCEDURE ActivateYourChronicle()
-    ACW(GETID("YourChronicle","UnityWndClass"),1581,1219,1419,923,0)
+    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
     BTN(LEFT,CLICK,2003,1235,203)
-    ACW(GETID("YourChronicle","UnityWndClass"),1581,1190,1419,923,0)
+    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
     MOUSEORG(GETID("YourChronicle","UnityWndClass"))
 FEND
 
