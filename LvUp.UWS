@@ -1,0 +1,78 @@
+ActivateYourChronicle()
+
+DIM i = 0
+
+WHILE TRUE
+    IF i = 0 THEN
+        // Sleep(1)
+        // HealSquads()
+        Sleep(1)
+        UpdateQuests()
+    ENDIF
+
+    SummonUnit(0)
+
+    Sleep(3)
+
+    FOR j = 0 TO 3
+        LevelUpUnit(j)
+        Sleep(5)
+    NEXT
+
+    Sleep(10)
+
+    i = (i + 1) MOD 10
+WEND
+
+PROCEDURE ActivateYourChronicle()
+    ACW(GETID("YourChronicle","UnityWndClass"),1581,1219,1419,923,0)
+    BTN(LEFT,CLICK,2003,1235,203)
+    ACW(GETID("YourChronicle","UnityWndClass"),1581,1190,1419,923,0)
+    MOUSEORG(GETID("YourChronicle","UnityWndClass"))
+FEND
+
+PROCEDURE UpdateQuests()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,1127,204,328) // 更新ボタンクリック
+FEND
+
+PROCEDURE HealSquads()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,780,249,188) // 1st 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,779,366,110) // 2nd 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,778,480,140) // 3rd 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,780,591,109) // 4th 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,780,700,109) // 5th 回復
+FEND
+
+PROCEDURE SummonUnit(n)
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(0.1)
+    BTN(LEFT,CLICK,478,160,62) // レベルアップ選択
+    Sleep(0.1)
+    BTN(LEFT,CLICK,552,332 + 50 * n,157) // 召喚
+FEND
+
+PROCEDURE LevelUpUnit(n)
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(0.1)
+    BTN(LEFT,CLICK,478,160,62) // レベルアップ選択
+    Sleep(0.1)
+    // BTN(LEFT,CLICK,552,332 + 50 * n,157) // 召喚
+    Sleep(0.1)
+    BTN(LEFT,CLICK,701,330 + 50 * n,375) // 筋力
+    Sleep(0.11)
+    BTN(LEFT,CLICK,810,332 + 50 * n,328) // 魔力
+    Sleep(0.1)
+    BTN(LEFT,CLICK,912,336 + 50 * n,266) // 能力
+FEND
