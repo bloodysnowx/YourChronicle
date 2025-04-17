@@ -4,8 +4,10 @@ DIM i = 0
 
 WHILE TRUE
     IF i = 0 THEN
-        // Sleep(1)
-        // HealSquads()
+        Sleep(1)
+        HealSquads()
+        Sleep(1)
+        CompleteQuests()
         Sleep(1)
         UpdateQuests()
     ENDIF
@@ -14,7 +16,7 @@ WHILE TRUE
 
     Sleep(3)
 
-    FOR j = 0 TO 3
+    FOR j = 0 TO 5
         LevelUpUnit(j)
         Sleep(5)
     NEXT
@@ -27,7 +29,6 @@ WEND
 PROCEDURE ActivateYourChronicle()
     ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
     BTN(LEFT,CLICK,2003,1235,203)
-    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
     MOUSEORG(GETID("YourChronicle","UnityWndClass"))
 FEND
 
@@ -53,6 +54,32 @@ PROCEDURE HealSquads()
     BTN(LEFT,CLICK,780,591,109) // 4th 回復
     Sleep(1)
     BTN(LEFT,CLICK,780,700,109) // 5th 回復
+FEND
+
+PROCEDURE CompleteQuests()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,740,249,188) // 1st 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,739,366,110) // 2nd 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,738,480,140) // 3rd 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,740,591,109) // 4th 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,740,700,109) // 5th 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
 FEND
 
 PROCEDURE SummonUnit(n)
