@@ -1,0 +1,4 @@
+class spirit-spring
+  procedure main()
+  fend
+endclass

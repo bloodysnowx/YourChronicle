@@ -1,0 +1,4 @@
+class village
+  procedure main()
+  fend
+endclass

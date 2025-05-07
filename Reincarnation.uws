@@ -1,0 +1,15 @@
+call village.uws
+call forest.uws
+call academic-city.uws
+call coastal-city.uws
+call spirit-spring.uws
+call ancient-ruins.uws
+call desert-lodging.uws
+
+village.main()
+forest.main()
+academic-city.main()
+coastal-city.main()
+spirit-spring.main()
+ancient-ruins.main()
+desert-lodging.main()

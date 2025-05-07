@@ -1,0 +1,4 @@
+class forest
+  procedure main()
+  fend
+endclass
