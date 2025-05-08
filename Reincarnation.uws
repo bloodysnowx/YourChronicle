@@ -1,3 +1,4 @@
+call common.uws
 call village.uws
 call forest.uws
 call academic-city.uws

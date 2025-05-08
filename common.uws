@@ -1,0 +1,7 @@
+class common
+  PROCEDURE ActivateYourChronicle()
+    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
+    BTN(LEFT,CLICK,2003,1235,203)
+    MOUSEORG(GETID("YourChronicle","UnityWndClass"))
+  FEND
+endclass

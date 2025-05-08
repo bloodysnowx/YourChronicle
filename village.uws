@@ -1,4 +1,51 @@
+call common.uws
+
 class village
   procedure main()
+    common.ActivateYourChronicle()
+    // village_click("001_chichi")
+    // village_click("001_chichi") // 2回目
+    // village_click("002_training01")
+    // village_click("003_go_to_village")
+    // village_click("005_church")
+    // village_click("000_unlock")
+    // village_click("006_training02")
+    // village_click("007_go_out")
+    // village_click("008_crying")
+    // village_click("009_warugaki")
+    // village_click("010_村の外れ")
+    // village_click("011_戦術を学ぶ")
+    // village_click("012_You") 
+    // village_click("012_You") // 2回目
+    // village_click("012_You") // 3回目
+    // village_click("012_You") // 4回目
+    // village_click("012_You") // 5回目
+    // village_click("013_父の話")
+    // village_click("013_父の話") // 2回目
+    // village_click("014_覚えておけよ")
+    // village_click("ダンジョン1")
+    village_click("015_母の書斎")
+    village_click("ダンジョン2")
+  fend
+
+  procedure village_click(name)
+    path = "./village/" + name + ".bmp"
+    while chkimg(path) = FALSE
+      sleep(1)
+    wend
+    MMV(G_IMG_X,G_IMG_Y,15)
+    BTN(LEFT,CLICK,G_IMG_X + 30,G_IMG_Y + 30,400)
+    sleep(0.1)
+    MMV(10,10,15)
+  fend
+
+  procedure village_set_loop(name)
+    path = "./village/" + name + ".bmp"
+    while chkimg(path) = FALSE
+      sleep(1)
+    wend
+    MMV(G_IMG_X,G_IMG_Y,200)
+    KBD(VK_Q,CLICK,200)
+    MMV(10,10,15)
   fend
 endclass
