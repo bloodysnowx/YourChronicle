@@ -1,18 +1,21 @@
-class spirit-spring
+class spirit_spring
+  procedure spirit_spring()
+  fend
+
   procedure main()
-    select()
-    click("ダンジョン1")
-    click("ダンジョン2")
-    click("ダンジョン3")
+    this.select()
+    wait_and_click("ダンジョン1")
+    wait_and_click("ダンジョン2")
+    wait_and_click("ダンジョン3")
     sleep(2)
-    click("ダンジョン1")
+    wait_and_click("ダンジョン1")
   fend
 
   procedure select()
     BTN(LEFT,CLICK,223,340,375)
   fend
 
-  procedure click(name)
-    common.click("spirit-spring", name)
+  procedure wait_and_click(name)
+    common.wait_and_click("spirit-spring", name)
   fend
 endclass

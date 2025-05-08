@@ -1,19 +1,33 @@
-class common
+module common
   PROCEDURE ActivateYourChronicle()
-    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
-    BTN(LEFT,CLICK,2003,1235,203)
-    MOUSEORG(GETID("YourChronicle","UnityWndClass"))
+    id = GETID("YourChronicle","UnityWndClass")
+    ACW(id,0,0,1419,923)
+    MOUSEORG(id)
   FEND
 
-procedure click(dir, name)
+  procedure wait_and_click(dir, name)
     path = "./" + dir + "/" + name + ".bmp"  
-    while chkimg(path) = FALSE
+    found = chkimg(path)
+    while found = []
       sleep(1)
+      found = chkimg(path)
     wend
-    MMV(G_IMG_X,G_IMG_Y,15)
-    BTN(LEFT,CLICK,G_IMG_X + 30,G_IMG_Y + 30,400)
+    x = found[0][0]
+    y = found[0][1]
+    MMV(x,y,15)
+    BTN(LEFT,CLICK,x + 30,y + 30,400)
     sleep(1)
     MMV(10,10,15)
     sleep(1)
   fend
-endclass
+
+  procedure load_party()
+    BTN(LEFT,CLICK,75,232,15)
+    sleep(1)
+    BTN(LEFT,CLICK,349,153,625)
+    sleep(1)
+    BTN(LEFT,CLICK,299,280,1015)
+    sleep(1)
+    BTN(LEFT,CLICK,64,198,250)
+  fend
+endmodule

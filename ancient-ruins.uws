@@ -1,16 +1,19 @@
-class ancient-ruins
+class ancient_ruins
+  procedure ancient_ruins()
+  fend
+  
   procedure main()
-    select()
-    click("ダンジョン1")
-    click("ダンジョン2")
-    click("ダンジョン3")
+    this.select()
+    wait_and_click("ダンジョン1")
+    wait_and_click("ダンジョン2")
+    wait_and_click("ダンジョン3")
   fend
 
   procedure select()
     BTN(LEFT,CLICK,223,370,375)
   fend
 
-  procedure click(name)
-    common.click("ancient-ruins", name)
+  procedure wait_and_click(name)
+    common.wait_and_click("ancient-ruins", name)
   fend
 endclass

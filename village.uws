@@ -1,71 +1,60 @@
 call common.uws
 
-class village
+module village
   procedure main()
-    common.ActivateYourChronicle()
-    click("001_chichi")
-    click("001_chichi") // 2回目
-    click("002_training01")
-    click("003_go_to_village")
-    click("005_church")
-    click("000_unlock")
-    click("006_training02")
-    click("007_go_out")
-    click("008_crying")
-    click("009_warugaki")
-    click("010_村の外れ")
-    click("011_戦術を学ぶ")
-    click("012_You") 
-    click("012_You") // 2回目
-    click("012_You") // 3回目
-    click("012_You") // 4回目
-    click("012_You") // 5回目
-    click("013_父の話")
-    click("013_父の話") // 2回目
-    click("014_覚えておけよ")
-    click("ダンジョン1")
-    click("015_母の書斎")
-    click("016_年配の女性と話す")
-    click("017_革細工おばさんと話す")
-    click("017_革細工おばさんと話す") // 2回目
-    click("017_革細工おばさんと話す") // 3回目
-    click("018_スライム愛好家と") // 1回目
-    click("018_スライム愛好家と") // 2回目
-    click("018_スライム愛好家と") // 3回目
-    click("018_スライム愛好家と") // 4回目
-    click("018_スライム愛好家と") // 5回目
-    click("019_テイマー学校")
-    click("ダンジョン2")
-    click("020_父と話す")
-    click("021_少女と話す")
-    click("022_unlock")
-    click("023_training03")
-    click("024_unlock")
-    click("025_training04")
-    click("026_unlock")
-    click("027_父と戦う")
-    click("028_unlock")
-    click("029_父と戦う")
-    click("022_薄暗い洞窟")
-    click("030_革細工おばさん4")
-    click("031_テント")
-    click("032_財布")
-    click("033_遊ばない")
-    click("033_少女と話す")
-    click("034_一人で村を出る")
+    wait_and_click("001_chichi")
+    wait_and_click("001_chichi") // 2回目
+    wait_and_click("002_training01")
+    wait_and_click("003_go_to_village")
+    wait_and_click("005_church")
+    wait_and_click("000_unlock")
+    wait_and_click("006_training02")
+    wait_and_click("007_go_out")
+    wait_and_click("008_crying")
+    wait_and_click("009_warugaki")
+    wait_and_click("010_村の外れ")
+    wait_and_click("011_戦術を学ぶ")
+    wait_and_click("012_You") 
+    wait_and_click("012_You") // 2回目
+    wait_and_click("012_You") // 3回目
+    wait_and_click("012_You") // 4回目
+    wait_and_click("012_You") // 5回目
+    wait_and_click("013_父の話")
+    wait_and_click("013_父の話") // 2回目
+    wait_and_click("014_覚えておけよ")
+    wait_and_click("ダンジョン1")
+    wait_and_click("015_母の書斎")
+    wait_and_click("016_年配の女性と話す")
+    wait_and_click("017_革細工おばさんと話す")
+    wait_and_click("017_革細工おばさんと話す") // 2回目
+    wait_and_click("017_革細工おばさんと話す") // 3回目
+    wait_and_click("018_スライム愛好家と") // 1回目
+    wait_and_click("018_スライム愛好家と") // 2回目
+    wait_and_click("018_スライム愛好家と") // 3回目
+    wait_and_click("018_スライム愛好家と") // 4回目
+    wait_and_click("018_スライム愛好家と") // 5回目
+    wait_and_click("019_テイマー学校")
+    wait_and_click("ダンジョン2")
+    wait_and_click("020_父と話す")
+    wait_and_click("021_少女と話す")
+    wait_and_click("022_unlock")
+    wait_and_click("023_training03")
+    wait_and_click("024_unlock")
+    wait_and_click("025_training04")
+    wait_and_click("026_unlock")
+    wait_and_click("027_父と戦う")
+    wait_and_click("028_unlock")
+    wait_and_click("029_父と戦う")
+    wait_and_click("022_薄暗い洞窟")
+    wait_and_click("030_革細工おばさん4")
+    wait_and_click("031_テント")
+    wait_and_click("032_財布")
+    wait_and_click("033_遊ばない")
+    wait_and_click("033_少女と話す")
+    wait_and_click("034_一人で村を出る")
   fend
 
-  procedure click(name)
-    common.click("village", name)
+  procedure wait_and_click(name)
+    common.wait_and_click("village", name)
   fend
-
-  procedure village_set_loop(name)
-    path = "./village/" + name + ".bmp"
-    while chkimg(path) = FALSE
-      sleep(1)
-    wend
-    MMV(G_IMG_X,G_IMG_Y,200)
-    KBD(VK_Q,CLICK,200)
-    MMV(10,10,15)
-  fend
-endclass
+endmodule

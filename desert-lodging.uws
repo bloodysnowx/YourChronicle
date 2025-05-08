@@ -1,4 +1,16 @@
-class desert-lodging
+class desert_lodging
+  procedure desert_lodging()
+  fend
+  
   procedure main()
+    this.select()
+  fend
+
+  procedure select()
+    BTN(LEFT,CLICK,223,380,375)
+  fend
+
+  procedure wait_and_click(name)
+    common.wait_and_click("desert-lodging", name)
   fend
 endclass

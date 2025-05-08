@@ -1,58 +1,61 @@
 class forest
+  procedure forest()
+  fend
+
   procedure main()
-    select()
-    click("ダンジョン1")
-    click("002_食堂")
-    click("003_魚の塩焼き")
-    click("004_料理長と話す")
-    click("004_料理長と話す") // 2回目
-    click("004_料理長と話す") // 3回目
-    click("005_unlock")
-    click("ダンジョン2")
-    click("006_木こり")
-    click("007_マッスルマン")
-    click("008_仕事をもらう")
-    click("009_木こりと話す")
-    click("009_木こりと話す") // 2回目
-    click("009_木こりと話す") // 3回目
-    click("010_きのこ中毒者と話す")
-    click("010_きのこ中毒者と話す") // 2回目
-    click("010_きのこ中毒者と話す") // 3回目
-    click("010_きのこ中毒者と話す") // 4回目
-    click("009_木こりと話す") // 4回目
-    click("011_荷馬車")
-    click("012_魔物の襲撃")
-    click("013_騎士団員と話す")
-    click("014_unlock")
-    click("ダンジョン3")
-    click("013_騎士団員と話す") // 2回目
-    click("013_騎士団員と話す") // 3回目
-    click("013_騎士団員と話す") // 4回目
-    click("015_料理長と話す")
-    click("016_森を抜ける")
+    this.select()
+    wait_and_click("ダンジョン1")
+    wait_and_click("002_食堂")
+    wait_and_click("003_魚の塩焼き")
+    wait_and_click("004_料理長と話す")
+    wait_and_click("004_料理長と話す") // 2回目
+    wait_and_click("004_料理長と話す") // 3回目
+    wait_and_click("005_unlock")
+    wait_and_click("ダンジョン2")
+    wait_and_click("006_木こり")
+    wait_and_click("007_マッスルマン")
+    wait_and_click("008_仕事をもらう")
+    wait_and_click("009_木こりと話す")
+    wait_and_click("009_木こりと話す") // 2回目
+    wait_and_click("009_木こりと話す") // 3回目
+    wait_and_click("010_きのこ中毒者と話す")
+    wait_and_click("010_きのこ中毒者と話す") // 2回目
+    wait_and_click("010_きのこ中毒者と話す") // 3回目
+    wait_and_click("010_きのこ中毒者と話す") // 4回目
+    wait_and_click("009_木こりと話す") // 4回目
+    wait_and_click("011_荷馬車")
+    wait_and_click("012_魔物の襲撃")
+    wait_and_click("013_騎士団員と話す")
+    wait_and_click("014_unlock")
+    wait_and_click("ダンジョン3")
+    wait_and_click("013_騎士団員と話す") // 2回目
+    wait_and_click("013_騎士団員と話す") // 3回目
+    wait_and_click("013_騎士団員と話す") // 4回目
+    wait_and_click("015_料理長と話す")
+    wait_and_click("016_森を抜ける")
   fend
 
   procedure ranch1()
-    select()
-    click("017_牧場")
-    click("018_屈強な男と話す")
-    click("018_屈強な男と話す") // 2回目
-    click("018_屈強な男と話す") // 3回目
+    this.select()
+    wait_and_click("017_牧場")
+    wait_and_click("018_屈強な男と話す")
+    wait_and_click("018_屈強な男と話す") // 2回目
+    wait_and_click("018_屈強な男と話す") // 3回目
   fend
 
   procedure ranch2()
-    select()
-    click("018_屈強な男と話す")
-    click("018_屈強な男と話す") // 2回目
-    click("018_屈強な男と話す") // 3回目
-    click("018_屈強な男と話す") // 4回目
+    this.select()
+    wait_and_click("018_屈強な男と話す")
+    wait_and_click("018_屈強な男と話す") // 2回目
+    wait_and_click("018_屈強な男と話す") // 3回目
+    wait_and_click("018_屈強な男と話す") // 4回目
   fend
 
   procedure select()
     BTN(LEFT,CLICK,223,230,375)
   fend
 
-  procedure click(name)
-    common.click("forest", name)
+  procedure wait_and_click(name)
+    common.wait_and_click("forest", name)
   fend
 endclass
