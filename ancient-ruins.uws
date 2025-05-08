@@ -1,4 +1,16 @@
 class ancient-ruins
   procedure main()
+    select()
+    click("ダンジョン1")
+    click("ダンジョン2")
+    click("ダンジョン3")
+  fend
+
+  procedure select()
+    BTN(LEFT,CLICK,223,370,375)
+  fend
+
+  procedure click(name)
+    common.click("ancient-ruins", name)
   fend
 endclass

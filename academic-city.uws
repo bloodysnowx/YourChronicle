@@ -1,4 +1,157 @@
+call common.uws
+
 class academic-city
   procedure main()
+    select()
+    click("001_学生寮に入る")
+    click("002_ギルドへ行く")
+    click("003_受付嬢と話す")
+    click("003_受付嬢と話す") // 2回目
+    click("003_受付嬢と話す") // 3回目
+    click("004_毛皮の納品")
+    click("005_ゴミ屋敷の掃除")
+    click("ダンジョン1-1")
+    click("006_入学式")
+    click("007_校長によるスピーチ")
+    click("007_校長によるスピーチ") // 2回目
+    click("007_校長によるスピーチ") // 3回目
+    click("008_unlock")
+    click("ダンジョン1-2")
+    click("009_先生に挨拶")
+    click("010_胡散臭い商人と")
+    click("ダンジョン1-3")
+    click("011_先生と話す")
+    click("011_先生と話す") // 2回目
+    click("011_先生と話す") // 3回目
+    click("011_先生と話す") // 4回目
+    click("011_先生と話す") // 5回目
+    click("011_先生と話す") // 6回目
+    click("ダンジョン2-1")
+    click("ダンジョン2-2")
+    click("ダンジョン2-3")
+    sleep(2)
+    click("ダンジョン3-1")
+    click("ダンジョン3-2")
+    click("ダンジョン3-3")
+    sleep(2)
+    click("ダンジョン4-1")
+    click("ダンジョン4-2")
+    click("ダンジョン4-3")
+    sleep(2)
+    click("ダンジョン5-1")
+    click("ダンジョン5-2")
+    click("012_ナーリと話す")
+    click("012_ナーリと話す") // 2回目
+    click("012_ナーリと話す") // 3回目
+    click("012_ナーリと話す") // 4回目
+    click("013_魔物研究所")
+    click("014_魔物博士")
+    click("014_魔物博士") // 2回目
+    click("014_魔物博士") // 3回目
+    click("014_魔物博士") // 4回目
+    click("014_魔物博士") // 5回目
+    click("014_魔物博士") // 6回目
+    click("014_魔物博士") // 7回目
+    click("014_魔物博士") // 8回目
+    click("014_魔物博士") // 9回目
+    click("015_テイマー見習い")
+    close_upgrades1()
+    click("016_受付嬢と話す")
+    click("017_テイマー")
+    click("018_達成報告")
+    click("019_ギルドへ行く")
+    scroll_down_upgrades()
+    click("020_受付嬢と話す")
+    click("021_パン納品")
+    click("021_パン納品") // 2回目
+    click("021_パン納品") // 3回目
+    click("022_ゴーレム討伐")
+  fend
+
+  procedure go_to_spirit-spring()
+    select()
+    scroll_down_upgrades()
+    click("023_受付嬢と話す")
+    click("023_受付嬢と話す") // 2回目
+    click("024_達成報告")
+    click("023_受付嬢と話す") // 3回目
+    scroll_up_upgrades()
+    click("025_ギルドへ行く")
+    scroll_down_upgrades()
+    click("026_エルダートレント")
+    click("023_受付嬢と話す")　// 4回目
+    click("023_受付嬢と話す")　// 5回目
+  fend
+
+  procedure go_to_ancient-ruins()
+    select()
+    scroll_down_upgrades()
+    click("024_達成報告")
+    click("023_受付嬢と話す")
+    click("027_ビーストテイマー")
+    scroll_up_upgrades()
+    click("028_ギルドへ行く")
+    scroll_down_upgrades()
+    click("029_ドラゴン")
+  fend
+
+  procedure go_to_cooking()
+    select()
+    // click("030_料理研究会")
+    close_upgrades2()
+  fend
+
+  procedure select()
+    BTN(LEFT,CLICK,223,255,375)
+  fend
+
+  procedure close_upgrades1()
+    BTN(LEFT,CLICK,668,429,578)
+    sleep(1)
+    BTN(LEFT,CLICK,667,467,1266)
+    sleep(1)
+    BTN(LEFT,CLICK,667,501,547)
+    sleep(1)
+    BTN(LEFT,CLICK,666,541,781)
+  fend
+
+  procedure close_upgrades2()
+    BTN(LEFT,CLICK,745,196,46)
+    sleep(1)
+    BTN(LEFT,CLICK,706,427,1125)
+    sleep(1)
+    BTN(LEFT,CLICK,702,497,1891)
+  fend
+
+  procedure scroll_down_upgrades()
+    BTN(LEFT,DOWN,831,267,547)
+    MMV(830,280,15)
+    MMV(829,317,15)
+    MMV(827,363,15)
+    MMV(829,410,16)
+    MMV(831,462,15)
+    MMV(831,507,16)
+    MMV(831,542,16)
+    MMV(828,580,16)
+    MMV(828,620,16)
+    MMV(828,660,16)
+    BTN(LEFT,UP,830,700,0)
+  fend
+
+  procedure scroll_up_upgrades()
+    BTN(LEFT,DOWN,831,605,547)
+    MMV(830,580,15)
+    MMV(829,547,15)
+    MMV(827,503,15)
+    MMV(829,460,16)
+    MMV(831,422,15)
+    MMV(831,367,16)
+    MMV(831,322,16)
+    MMV(828,280,16)
+    BTN(LEFT,UP,830,267,0)
+  fend
+
+  procedure click(name)
+    common.click("academic-city", name)
   fend
 endclass

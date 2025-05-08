@@ -1,4 +1,48 @@
+call common.uws
+
 class coastal-city
   procedure main()
+    select()
+    click("ダンジョン1")
+    click("ダンジョン2")
+    click("001_門番と話す")
+    click("001_門番と話す") // 2回目
+    click("ダンジョン3")
+    click("002_ふくよか")
+    click("002_ふくよか") // 2回目
+    click("002_ふくよか") // 3回目
+    click("002_ふくよか") // 4回目
+    click("002_ふくよか") // 5回目
+    click("002_ふくよか") // 6回目
+    click("002_ふくよか") // 7回目
+    click("002_ふくよか") // 8回目
+    click("002_ふくよか") // 9回目
+    click("002_ふくよか") // 10回目
+    click("002_ふくよか") // 11回目
+    click("003_岩塩を売る")
+    click("002_ふくよか") // 12回目
+    click("002_ふくよか") // 13回目
+    click("002_ふくよか") // 14回目
+    click("004_認める")
+    click("005_ミスターグルメ")
+    click("005_ミスターグルメ") // 2回目
+    click("005_ミスターグルメ") // 3回目
+    click("005_ミスターグルメ") // 4回目
+  fend
+
+  procedure chiken()
+    select()
+    click("006_鶏肉")
+    click("006_鶏肉") // 2回目
+    click("006_鶏肉") // 3回目
+    click("006_鶏肉") // 4回目
+  fend
+
+  procedure select()
+    BTN(LEFT,CLICK,223,300,375)
+  fend
+
+  procedure click(name)
+    common.click("coastal-city", name)
   fend
 endclass

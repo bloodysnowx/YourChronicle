@@ -7,10 +7,17 @@ call spirit-spring.uws
 call ancient-ruins.uws
 call desert-lodging.uws
 
-village.main()
-forest.main()
-academic-city.main()
-coastal-city.main()
-spirit-spring.main()
-ancient-ruins.main()
+common.ActivateYourChronicle()
+// village.main()
+// forest.main()
+// academic-city.main()
+// forest.ranch1()
+// coastal-city.main()
+// academic-city.go_to_spirit-spring()
+// spirit-spring.main()
+// coastal-city.chiken()
+// forest.ranch2()
+// academic-city.go_to_ancient-ruins()
+// ancient-ruins.main()
+academic-city.go_to_cooking()
 desert-lodging.main()

@@ -1,4 +1,18 @@
 class spirit-spring
   procedure main()
+    select()
+    click("ダンジョン1")
+    click("ダンジョン2")
+    click("ダンジョン3")
+    sleep(2)
+    click("ダンジョン1")
+  fend
+
+  procedure select()
+    BTN(LEFT,CLICK,223,340,375)
+  fend
+
+  procedure click(name)
+    common.click("spirit-spring", name)
   fend
 endclass

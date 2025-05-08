@@ -4,4 +4,16 @@ class common
     BTN(LEFT,CLICK,2003,1235,203)
     MOUSEORG(GETID("YourChronicle","UnityWndClass"))
   FEND
+
+procedure click(dir, name)
+    path = "./" + dir + "/" + name + ".bmp"  
+    while chkimg(path) = FALSE
+      sleep(1)
+    wend
+    MMV(G_IMG_X,G_IMG_Y,15)
+    BTN(LEFT,CLICK,G_IMG_X + 30,G_IMG_Y + 30,400)
+    sleep(1)
+    MMV(10,10,15)
+    sleep(1)
+  fend
 endclass
