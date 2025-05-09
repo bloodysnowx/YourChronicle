@@ -109,6 +109,7 @@ module academic_city
 
   procedure select()
     BTN(LEFT,CLICK,223,255,375)
+    sleep(1)
   fend
 
   procedure close_upgrades1()

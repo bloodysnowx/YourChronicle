@@ -50,7 +50,6 @@ module village
     wait_and_click("031_テント")
     wait_and_click("032_財布")
     wait_and_click("033_遊ばない")
-    wait_and_click("033_少女と話す")
     wait_and_click("034_一人で村を出る")
   fend
 

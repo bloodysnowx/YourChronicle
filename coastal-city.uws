@@ -43,6 +43,7 @@ module coastal_city
 
   procedure select()
     BTN(LEFT,CLICK,223,300,375)
+    sleep(1)
   fend
 
   procedure wait_and_click(name)

@@ -10,7 +10,9 @@ module ancient_ruins
   fend
 
   procedure select()
+    sleep(1)
     BTN(LEFT,CLICK,223,370,375)
+    sleep(1)
   fend
 
   procedure wait_and_click(name)
