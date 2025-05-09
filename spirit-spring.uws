@@ -1,4 +1,4 @@
-class spirit_spring
+module spirit_spring
   procedure spirit_spring()
   fend
 
@@ -18,4 +18,4 @@ class spirit_spring
   procedure wait_and_click(name)
     common.wait_and_click("spirit-spring", name)
   fend
-endclass
+endmodule

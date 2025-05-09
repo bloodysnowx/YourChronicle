@@ -1,6 +1,6 @@
 call common.uws
 
-class coastal_city
+module coastal_city
   procedure coastal_city()
   fend
 
@@ -29,8 +29,8 @@ class coastal_city
     wait_and_click("004_認める")
     wait_and_click("005_ミスターグルメ")
     wait_and_click("005_ミスターグルメ") // 2回目
-    wait_and_click("005_ミスターグルメ") // 3回目
-    wait_and_click("005_ミスターグルメ") // 4回目
+    wait_and_click("005_ミスターグルメ3") // 3回目
+    wait_and_click("005_ミスターグルメ4") // 4回目
   fend
 
   procedure chiken()
@@ -48,4 +48,4 @@ class coastal_city
   procedure wait_and_click(name)
     common.wait_and_click("coastal-city", name)
   fend
-endclass
+endmodule

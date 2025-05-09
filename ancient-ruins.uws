@@ -1,4 +1,4 @@
-class ancient_ruins
+module ancient_ruins
   procedure ancient_ruins()
   fend
   
@@ -16,4 +16,4 @@ class ancient_ruins
   procedure wait_and_click(name)
     common.wait_and_click("ancient-ruins", name)
   fend
-endclass
+endmodule

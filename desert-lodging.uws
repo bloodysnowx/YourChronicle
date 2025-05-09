@@ -1,4 +1,4 @@
-class desert_lodging
+module desert_lodging
   procedure desert_lodging()
   fend
   
@@ -13,4 +13,4 @@ class desert_lodging
   procedure wait_and_click(name)
     common.wait_and_click("desert-lodging", name)
   fend
-endclass
+endmodule

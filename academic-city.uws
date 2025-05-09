@@ -1,6 +1,6 @@
 call common.uws
 
-class academic_city
+module academic_city
   procedure academic_city()
   fend
 
@@ -130,7 +130,8 @@ class academic_city
   fend
 
   procedure scroll_down_upgrades()
-    BTN(LEFT,DOWN,831,267,547)
+    BTN(LEFT,DOWN,831,200,547)
+    MMV(830,240,15)
     MMV(830,280,15)
     MMV(829,317,15)
     MMV(827,363,15)
@@ -141,11 +142,17 @@ class academic_city
     MMV(828,580,16)
     MMV(828,620,16)
     MMV(828,660,16)
-    BTN(LEFT,UP,830,700,0)
+    MMV(828,700,16)
+    MMV(828,750,16)
+    BTN(LEFT,UP,830,800,0)
   fend
 
   procedure scroll_up_upgrades()
-    BTN(LEFT,DOWN,831,605,547)
+    BTN(LEFT,DOWN,831,800,547)
+    MMV(830,760,15)
+    MMV(830,720,15)
+    MMV(830,680,15)
+    MMV(830,640,15)
     MMV(830,580,15)
     MMV(829,547,15)
     MMV(827,503,15)
@@ -154,10 +161,11 @@ class academic_city
     MMV(831,367,16)
     MMV(831,322,16)
     MMV(828,280,16)
-    BTN(LEFT,UP,830,267,0)
+    MMV(828,240,16)
+    BTN(LEFT,UP,830,200,0)
   fend
 
   procedure wait_and_click(name)
     common.wait_and_click("academic-city", name)
   fend
-endclass
+endmodule

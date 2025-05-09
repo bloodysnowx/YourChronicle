@@ -9,6 +9,7 @@ call desert-lodging.uws
 
 common.ActivateYourChronicle()
 common.load_party()
+common.load_template()
 village.main()
 forest.main()
 academic_city.main()

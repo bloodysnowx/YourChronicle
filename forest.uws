@@ -1,4 +1,4 @@
-class forest
+module forest
   procedure forest()
   fend
 
@@ -58,4 +58,4 @@ class forest
   procedure wait_and_click(name)
     common.wait_and_click("forest", name)
   fend
-endclass
+endmodule
