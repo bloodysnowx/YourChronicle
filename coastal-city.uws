@@ -29,7 +29,7 @@ module coastal_city
     wait_and_click("004_認める")
     wait_and_click("005_ミスターグルメ")
     wait_and_click("005_ミスターグルメ") // 2回目
-    wait_and_click("005_ミスターグルメ3") // 3回目
+    wait_and_click("005_ミスターグルメ3", 99.998) // 3回目
     wait_and_click("005_ミスターグルメ4") // 4回目
   fend
 

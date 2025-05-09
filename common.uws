@@ -5,7 +5,7 @@ module common
     MOUSEORG(id)
   FEND
 
-  procedure wait_and_click(dir, name, threshold = 99.997)
+  procedure wait_and_click(dir, name, threshold = 99.997, offset_x = 30, offset_y = 30)
     path = "./" + dir + "/" + name + ".bmp"
     print "finding: " + path
     MMV(10,10,15)
@@ -18,7 +18,7 @@ module common
     x = found[0][0]
     y = found[0][1]
     MMV(x,y,15)
-    BTN(LEFT,CLICK,x + 30,y + 30,400)
+    BTN(LEFT,CLICK,x + offset_x,y + offset_y,400)
     sleep(1)
     MMV(10,10,15)
     sleep(1)

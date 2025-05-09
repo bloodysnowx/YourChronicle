@@ -46,7 +46,7 @@ module village
     wait_and_click("028_unlock")
     wait_and_click("029_父と戦う")
     wait_and_click("022_薄暗い洞窟")
-    wait_and_click("030_革細工おばさん4")
+    wait_and_click("030_革細工おばさん4", 99.998)
     wait_and_click("031_テント")
     wait_and_click("032_財布")
     wait_and_click("033_遊ばない")

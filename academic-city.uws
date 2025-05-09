@@ -59,9 +59,11 @@ module academic_city
     wait_and_click("014_魔物博士") // 9回目
     wait_and_click("015_テイマー見習い")
     close_upgrades1()
+    scroll_down_upgrades()
     wait_and_click("016_受付嬢と話す", 95.0)
     wait_and_click("017_テイマー")
     wait_and_click("018_達成報告", 98.0)
+    scroll_up_upgrades()
     wait_and_click("019_ギルドへ行く")
     scroll_down_upgrades()
     wait_and_click("020_受付嬢と話す")
@@ -93,7 +95,7 @@ module academic_city
     wait_and_click("023_受付嬢と話す")
     wait_and_click("027_ビーストテイマー", 99.999)
     scroll_up_upgrades()
-    wait_and_click("028_ギルドへ行く")
+    wait_and_click("028_ギルドへ行く", 99.998)
     scroll_down_upgrades()
     wait_and_click("029_ドラゴン")
   fend
@@ -139,6 +141,7 @@ module academic_city
   fend
 
   procedure scroll_down_upgrades()
+    sleep(1)
     BTN(LEFT,DOWN,831,200,547)
     MMV(830,240,15)
     MMV(830,280,15)
@@ -154,9 +157,11 @@ module academic_city
     MMV(828,700,16)
     MMV(828,750,16)
     BTN(LEFT,UP,830,800,0)
+    sleep(1)
   fend
 
   procedure scroll_up_upgrades()
+    sleep(1)
     BTN(LEFT,DOWN,831,800,547)
     MMV(830,760,15)
     MMV(830,720,15)
@@ -172,6 +177,7 @@ module academic_city
     MMV(828,280,16)
     MMV(828,240,16)
     BTN(LEFT,UP,830,200,0)
+    sleep(1)
   fend
 
   procedure wait_and_click(name, threshold=99.997)
