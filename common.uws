@@ -5,14 +5,14 @@ module common
     MOUSEORG(id)
   FEND
 
-  procedure wait_and_click(dir, name)
+  procedure wait_and_click(dir, name, threshold = 99.997)
     path = "./" + dir + "/" + name + ".bmp"
     print "finding: " + path
     MMV(10,10,15)
-    found = chkimg(path, 99.9, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+    found = chkimg(path, threshold, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
     while found = []
       sleep(1)
-      found = chkimg(path, 99.9, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+      found = chkimg(path, threshold, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
     wend
     print "found: " + found
     x = found[0][0]

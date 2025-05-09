@@ -12,6 +12,7 @@ module spirit_spring
   fend
 
   procedure select()
+    sleep(1)
     BTN(LEFT,CLICK,223,340,375)
     sleep(1)
   fend

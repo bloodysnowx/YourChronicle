@@ -52,10 +52,12 @@ module forest
   fend
 
   procedure select()
+    sleep(1)
     BTN(LEFT,CLICK,223,230,375)
+    sleep(1)
   fend
 
-  procedure wait_and_click(name)
-    common.wait_and_click("forest", name)
+  procedure wait_and_click(name, threshold=99.997)
+    common.wait_and_click("forest", name, threshold)
   fend
 endmodule

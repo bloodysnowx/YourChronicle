@@ -59,9 +59,9 @@ module academic_city
     wait_and_click("014_魔物博士") // 9回目
     wait_and_click("015_テイマー見習い")
     close_upgrades1()
-    wait_and_click("016_受付嬢と話す")
+    wait_and_click("016_受付嬢と話す", 95.0)
     wait_and_click("017_テイマー")
-    wait_and_click("018_達成報告")
+    wait_and_click("018_達成報告", 98.0)
     wait_and_click("019_ギルドへ行く")
     scroll_down_upgrades()
     wait_and_click("020_受付嬢と話す")
@@ -91,7 +91,7 @@ module academic_city
     scroll_down_upgrades()
     wait_and_click("024_達成報告")
     wait_and_click("023_受付嬢と話す")
-    wait_and_click("027_ビーストテイマー")
+    wait_and_click("027_ビーストテイマー", 99.999)
     scroll_up_upgrades()
     wait_and_click("028_ギルドへ行く")
     scroll_down_upgrades()
@@ -105,9 +105,17 @@ module academic_city
     wait_and_click("031_料理研究家")
     wait_and_click("031_料理研究家") // 2回目
     wait_and_click("031_料理研究家") // 3回目
+    wait_and_click("032_ワイルドミート1")
+    wait_and_click("033_ワイルドミート2")
+    wait_and_click("034_焼肉フェスティバル")
+    wait_and_click("035_ミズスイーツ")
+    wait_and_click("036_ミズスイーツ2")
+    scroll_down_upgrades()
+    wait_and_click("037_アイス")
   fend
 
   procedure select()
+    sleep(1)
     BTN(LEFT,CLICK,223,255,375)
     sleep(1)
   fend
@@ -166,7 +174,7 @@ module academic_city
     BTN(LEFT,UP,830,200,0)
   fend
 
-  procedure wait_and_click(name)
-    common.wait_and_click("academic-city", name)
+  procedure wait_and_click(name, threshold=99.997)
+    common.wait_and_click("academic-city", name, threshold)
   fend
 endmodule

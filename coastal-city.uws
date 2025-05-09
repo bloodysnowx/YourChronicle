@@ -42,11 +42,12 @@ module coastal_city
   fend
 
   procedure select()
+    sleep(1)
     BTN(LEFT,CLICK,223,300,375)
     sleep(1)
   fend
 
-  procedure wait_and_click(name)
-    common.wait_and_click("coastal-city", name)
+  procedure wait_and_click(name, threshold=99.997)
+    common.wait_and_click("coastal-city", name, threshold)
   fend
 endmodule

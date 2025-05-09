@@ -7,7 +7,7 @@ module desert_lodging
   fend
 
   procedure select()
-    BTN(LEFT,CLICK,223,380,375)
+    // BTN(LEFT,CLICK,223,380,375)
   fend
 
   procedure wait_and_click(name)

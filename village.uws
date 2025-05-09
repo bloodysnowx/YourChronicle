@@ -53,7 +53,7 @@ module village
     wait_and_click("034_一人で村を出る")
   fend
 
-  procedure wait_and_click(name)
-    common.wait_and_click("village", name)
+  procedure wait_and_click(name, threshold=99.997)
+    common.wait_and_click("village", name, threshold)
   fend
 endmodule
