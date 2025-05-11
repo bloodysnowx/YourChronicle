@@ -2,10 +2,14 @@ call common.uws
 
 while true
   wait_and_click("01_start", 98)
-  // wait_and_click("02_load")
+  common.HealSquads()
   wait_and_click("03_儀式")
-  click07still04()
-  // wait_and_click("04_詳細")
+  clickAstillB("07_聖なる儀式", "09_rank3x")
+  common.CompleteQuests()
+  common.UpdateQuests()
+  wait_and_click("03_儀式")
+  clickAstillB("07_聖なる儀式", "04_詳細")
+  wain_and_click("04_詳細")
   wait_and_click("05_転生")
   wait_and_click("06_ok", 90)
 wend
@@ -14,18 +18,18 @@ procedure wait_and_click(name, threshold=99.997, offset_x = 10, offset_y = 10)
   common.wait_and_click("loop", name, threshold, offset_x, offset_y)
 fend
 
-procedure click07still04()
-  path04 = "./loop/04_詳細.bmp"
-  path07 = "./loop/07_聖なる儀式.bmp"
-  path08 = "./loop/08_rank38.bmp"
-  print "finding: " + path04
-  MMV(10,10,15)
-  found = chkimg(path04, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+procedure clickAstillB(a, b)
+  pathA = "./loop/" + a + ".bmp"
+  pathB = "./loop/" + b + ".bmp"
+  print "finding: " + pathB
+  found = chkimg(pathB, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+
   while found = []
     sleep(2)
-    found = chkimg(path07, 99.999, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+    found = chkimg(pathA, 99.999, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+
     if found != [] then
-      print "聖なる儀式: " + found
+      print a + ": " + found
       x = found[0][0]
       y = found[0][1]
       MMV(x,y,15)
@@ -35,14 +39,8 @@ procedure click07still04()
       sleep(0.5)
     endif
 
-    found = chkimg(path04, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
+    found = chkimg(pathB, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
   wend
+
   print "found: " + found
-  x = found[0][0]
-  y = found[0][1]
-  MMV(x,y,15)
-  BTN(LEFT,CLICK,x + 10,y + 10,400)
-  sleep(1)
-  MMV(10,10,15)
-  sleep(1)
 fend
