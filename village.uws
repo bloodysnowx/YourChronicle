@@ -2,7 +2,8 @@ call common.uws
 
 module village
   procedure main()
-    wait_and_click("001_chichi")
+  if 0 = 0
+    wait_and_click("001_chichi", 99.8)
     wait_and_click("001_chichi") // 2回目
     wait_and_click("002_training01")
     wait_and_click("003_go_to_village")
@@ -13,7 +14,7 @@ module village
     wait_and_click("008_crying")
     wait_and_click("009_warugaki")
     wait_and_click("010_村の外れ")
-    wait_and_click("011_戦術を学ぶ")
+    wait_and_click("011_戦術を学ぶ", 98)
     wait_and_click("012_You") 
     wait_and_click("012_You") // 2回目
     wait_and_click("012_You") // 3回目
@@ -21,13 +22,13 @@ module village
     wait_and_click("012_You") // 5回目
     wait_and_click("013_父の話")
     wait_and_click("013_父の話") // 2回目
-    wait_and_click("014_覚えておけよ")
+    wait_and_click("014_覚えておけよ", 98)
     wait_and_click("ダンジョン1")
-    wait_and_click("015_母の書斎")
-    wait_and_click("016_年配の女性と話す")
-    wait_and_click("017_革細工おばさんと話す")
-    wait_and_click("017_革細工おばさんと話す") // 2回目
-    wait_and_click("017_革細工おばさんと話す") // 3回目
+    wait_and_click("015_母の書斎", 98)
+    wait_and_click("016_年配の女性と話す", 98)
+    wait_and_click("017_革細工おばさんと話す", 98)
+    wait_and_click("017_革細工おばさんと話す", 98) // 2回目
+    wait_and_click("017_革細工おばさんと話す", 98) // 3回目
     wait_and_click("018_スライム愛好家と") // 1回目
     wait_and_click("018_スライム愛好家と") // 2回目
     wait_and_click("018_スライム愛好家と") // 3回目
@@ -35,8 +36,9 @@ module village
     wait_and_click("018_スライム愛好家と") // 5回目
     wait_and_click("019_テイマー学校")
     wait_and_click("ダンジョン2")
-    wait_and_click("020_父と話す")
-    wait_and_click("021_少女と話す")
+    wait_and_click("020_父と話す", 98)
+  endif
+    wait_and_click("021_少女と話す", 98)
     wait_and_click("022_unlock")
     wait_and_click("023_training03")
     wait_and_click("024_unlock")
