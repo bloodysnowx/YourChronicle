@@ -8,8 +8,10 @@ call ancient-ruins.uws
 call desert-lodging.uws
 
 common.ActivateYourChronicle()
+if 0 = 0
 common.load_party()
 common.load_template()
+endif
 village.main()
 forest.main()
 academic_city.main()

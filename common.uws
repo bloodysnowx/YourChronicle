@@ -47,4 +47,46 @@ module common
     Sleep(1)
     BTN(LEFT,CLICK,1127,204,328) // 更新ボタンクリック
   FEND
+
+  PROCEDURE HealSquads()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,780,249,188) // 1st 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,779,366,110) // 2nd 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,778,480,140) // 3rd 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,780,591,109) // 4th 回復
+    Sleep(1)
+    BTN(LEFT,CLICK,780,700,109) // 5th 回復
+FEND
+
+PROCEDURE CompleteQuests()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,730,249,188) // 1st 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,729,366,110) // 2nd 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,728,480,140) // 3rd 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,720,591,109) // 4th 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,725,700,109) // 5th 完了
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+FEND
 endmodule

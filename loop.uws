@@ -35,7 +35,6 @@ procedure click07still04()
       sleep(0.5)
     endif
 
-
     found = chkimg(path04, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
   wend
   print "found: " + found
