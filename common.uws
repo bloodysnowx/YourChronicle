@@ -39,4 +39,12 @@ module common
     BTN(LEFT,CLICK,1331,60,437)
     sleep(1)
   fend
+
+  PROCEDURE UpdateQuests()
+    BTN(LEFT,CLICK,78,231,391) // パーティー選択
+    Sleep(1)
+    BTN(LEFT,CLICK,608,158,266) // クエスト選択
+    Sleep(1)
+    BTN(LEFT,CLICK,1127,204,328) // 更新ボタンクリック
+  FEND
 endmodule

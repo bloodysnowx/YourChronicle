@@ -66,7 +66,7 @@ module academic_city
     scroll_up_upgrades()
     wait_and_click("019_ギルドへ行く")
     scroll_down_upgrades()
-    wait_and_click("020_受付嬢と話す")
+    wait_and_click("020_受付嬢と話す", 98.0)
     wait_and_click("021_パン納品")
     wait_and_click("021_パン納品") // 2回目
     wait_and_click("021_パン納品") // 3回目
@@ -76,10 +76,10 @@ module academic_city
   procedure go_to_spirit_spring()
     this.select()
     scroll_down_upgrades()
-    wait_and_click("023_受付嬢と話す")
-    wait_and_click("023_受付嬢と話す") // 2回目
-    wait_and_click("024_達成報告")
-    wait_and_click("023_受付嬢と話す") // 3回目
+    wait_and_click("023_受付嬢と話す", 98.0)
+    wait_and_click("023_受付嬢と話す", 98.0) // 2回目
+    wait_and_click("024_達成報告", 98.0)
+    wait_and_click("023_受付嬢と話す", 98.0) // 3回目
     scroll_up_upgrades()
     wait_and_click("025_ギルドへ行く")
     scroll_down_upgrades()
@@ -107,7 +107,7 @@ module academic_city
     wait_and_click("031_料理研究家")
     wait_and_click("031_料理研究家") // 2回目
     wait_and_click("031_料理研究家") // 3回目
-    wait_and_click("032_ワイルドミート1")
+    wait_and_click("032_ワイルドミート1", 99.998)
     wait_and_click("033_ワイルドミート2")
     wait_and_click("034_焼肉フェスティバル")
     wait_and_click("035_ミズスイーツ")

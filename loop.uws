@@ -7,7 +7,7 @@ while true
   click07still04()
   // wait_and_click("04_詳細")
   wait_and_click("05_転生")
-  wait_and_click("06_ok", 98)
+  wait_and_click("06_ok", 90)
 wend
 
 procedure wait_and_click(name, threshold=99.997, offset_x = 10, offset_y = 10)
@@ -17,11 +17,12 @@ fend
 procedure click07still04()
   path04 = "./loop/04_詳細.bmp"
   path07 = "./loop/07_聖なる儀式.bmp"
+  path08 = "./loop/08_rank38.bmp"
   print "finding: " + path04
   MMV(10,10,15)
   found = chkimg(path04, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
   while found = []
-    sleep(4)
+    sleep(2)
     found = chkimg(path07, 99.999, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
     if found != [] then
       print "聖なる儀式: " + found
@@ -33,6 +34,8 @@ procedure click07still04()
       MMV(10,10,15)
       sleep(0.5)
     endif
+
+
     found = chkimg(path04, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
   wend
   print "found: " + found
