@@ -50,6 +50,42 @@ procedure clickAstillB(a, b)
 fend
 
 procedure greed()
+  BTN(LEFT,CLICK,100,293,109) // ルーティン
+  sleep(1)
+  BTN(LEFT,CLICK,214,466,109) // 強欲
+  sleep(1)
+  for i = 0 TO 6
+    BTN(LEFT,CLICK,1144,232,150) // 1つ目
+  next
+  sleep(1)
+
+  for i = 0 TO 2
+    for j = 0 TO 3
+      BTN(LEFT,CLICK,1146,265 + 30 * i,150) // 2-4つ目
+    next
+    sleep(1)
+  next
+
+  for i = 0 TO 1
+    BTN(LEFT,CLICK,1146,366,150) // 5つ目
+  next
+  sleep(1)
+
+  for i = 0 TO 8
+    for i = 0 TO 3
+      BTN(LEFT,CLICK,1144,399 + 31 * i,150) // 6-14つ目
+    next
+    sleep(1)
+  next
+
+  for i = 0 TO 6
+    BTN(LEFT,CLICK,1150,692,150) // 15つ目
+  next
+  sleep(1)
+  for i = 0 TO 6
+    BTN(LEFT,CLICK,1147,736,150) // 16つ目
+  next
+  sleep(1)
 fend
 
 procedure gluttony()
@@ -57,39 +93,10 @@ procedure gluttony()
   sleep(1)
   BTN(LEFT,CLICK,199,432,156) // 暴食
   sleep(1)
-  BTN(LEFT,CLICK,1076,229,204) // 1つ目
-  BTN(LEFT,CLICK,1076,229,203)
-  BTN(LEFT,CLICK,1076,229,187)
-  BTN(LEFT,CLICK,1076,229,156)
-  BTN(LEFT,CLICK,1076,229,204)
-  BTN(LEFT,CLICK,1076,229,203)
-  BTN(LEFT,CLICK,1076,229,187)
-  BTN(LEFT,CLICK,1076,229,156)
-  sleep(1)
-  BTN(LEFT,CLICK,1073,265,93) // 2つ目
-  BTN(LEFT,CLICK,1073,265,156)
-  BTN(LEFT,CLICK,1073,265,141)
-  BTN(LEFT,CLICK,1073,265,234)
-  BTN(LEFT,CLICK,1073,265,93)
-  BTN(LEFT,CLICK,1073,265,156)
-  BTN(LEFT,CLICK,1073,265,141)
-  BTN(LEFT,CLICK,1073,265,234)
-  sleep(1)
-  BTN(LEFT,CLICK,1070,302,131) // 3つ目
-  BTN(LEFT,CLICK,1070,302,187)
-  BTN(LEFT,CLICK,1070,302,187)
-  BTN(LEFT,CLICK,1070,302,218)
-  TN(LEFT,CLICK,1070,302,131)
-  BTN(LEFT,CLICK,1070,302,187)
-  BTN(LEFT,CLICK,1070,302,187)
-  BTN(LEFT,CLICK,1070,302,218)
-  sleep(1)
-  BTN(LEFT,CLICK,1068,332,171) // 4つ目
-  BTN(LEFT,CLICK,1068,332,234)
-  BTN(LEFT,CLICK,1068,332,187)
-  BTN(LEFT,CLICK,1068,332,312)
-  BTN(LEFT,CLICK,1068,332,171)
-  BTN(LEFT,CLICK,1068,332,234)
-  BTN(LEFT,CLICK,1068,332,187)
-  BTN(LEFT,CLICK,1068,332,312)
+  for i = 0 TO 3
+    for j = 0 TO 7
+      BTN(LEFT,CLICK,1076,229 + 35 * i,150)
+    next
+    sleep(1)
+  next
 fend
