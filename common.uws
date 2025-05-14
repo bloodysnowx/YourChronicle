@@ -14,7 +14,8 @@ module common
       sleep(1)
       found = chkimg(path, threshold, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
     wend
-    print "found: " + found
+
+    print "found: " + found + ", " + getHHMMSS()
     x = found[0][0]
     y = found[0][1]
     MMV(x,y,15)
@@ -22,6 +23,11 @@ module common
     sleep(1)
     MMV(10,10,15)
     sleep(1)
+  fend
+
+  function getHHMMSS()
+    gettime()
+    result = G_TIME_HH2 + ":" + G_TIME_NN2 + ":" + G_TIME_SS2
   fend
 
   procedure load_party()

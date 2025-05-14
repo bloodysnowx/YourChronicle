@@ -6,6 +6,7 @@ module academic_city
 
   procedure main()
     this.select()
+    if 0 = 0
     wait_and_click("001_学生寮に入る")
     wait_and_click("002_ギルドへ行く")
     wait_and_click("003_受付嬢と話す")
@@ -48,20 +49,21 @@ module academic_city
     wait_and_click("012_ナーリと話す") // 3回目
     wait_and_click("012_ナーリと話す") // 4回目
     wait_and_click("013_魔物研究所")
-    wait_and_click("014_魔物博士")
-    wait_and_click("014_魔物博士") // 2回目
-    wait_and_click("014_魔物博士") // 3回目
-    wait_and_click("014_魔物博士") // 4回目
-    wait_and_click("014_魔物博士") // 5回目
-    wait_and_click("014_魔物博士") // 6回目
-    wait_and_click("014_魔物博士") // 7回目
-    wait_and_click("014_魔物博士") // 8回目
-    wait_and_click("014_魔物博士") // 9回目
+    wait_and_click("014_魔物博士", 95.0)
+    endif
+    wait_and_click("014_魔物博士", 95.0) // 2回目
+    wait_and_click("014_魔物博士", 95.0) // 3回目
+    wait_and_click("014_魔物博士", 95.0) // 4回目
+    wait_and_click("014_魔物博士", 95.0) // 5回目
+    wait_and_click("014_魔物博士", 95.0) // 6回目
+    wait_and_click("014_魔物博士", 95.0) // 7回目
+    wait_and_click("014_魔物博士", 95.0) // 8回目
+    wait_and_click("014_魔物博士", 95.0) // 9回目
     wait_and_click("015_テイマー見習い")
     close_upgrades1()
     scroll_down_upgrades()
     wait_and_click("016_受付嬢と話す", 95.0)
-    wait_and_click("017_テイマー")
+    wait_and_click("017_テイマー", 99.998)
     wait_and_click("018_達成報告", 98.0)
     scroll_up_upgrades()
     wait_and_click("019_ギルドへ行く")
@@ -97,7 +99,7 @@ module academic_city
     scroll_up_upgrades()
     wait_and_click("028_ギルドへ行く", 99.998)
     scroll_down_upgrades()
-    wait_and_click("029_ドラゴン")
+    wait_and_click("029_ドラゴン", 90.0)
   fend
 
   procedure go_to_cooking()

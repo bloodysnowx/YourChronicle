@@ -8,8 +8,9 @@ while true
   common.CompleteQuests()
   common.UpdateQuests()
   wait_and_click("03_儀式")
+  sound("./alarm.mp3")
   clickAstillB("07_聖なる儀式", "04_詳細")
-  wain_and_click("04_詳細")
+  wait_and_click("04_詳細")
   wait_and_click("05_転生")
   wait_and_click("06_ok", 90)
 wend
@@ -42,5 +43,12 @@ procedure clickAstillB(a, b)
     found = chkimg(pathB, 99.997, 1, empty, empty, empty, empty, CHKIMG_NO_GRAY OR CHKIMG_METHOD_SQDIFF)
   wend
 
-  print "found: " + found
+  gettime()
+  print "found: " + found + ", " + common.getHHMMSS()
+fend
+
+procedure greed()
+fend
+
+procedure gluttony()
 fend
