@@ -3,7 +3,7 @@ call common.uws
 module village
   procedure main()
   if 0 = 0
-    wait_and_click("001_chichi", 99.8)
+    wait_and_click("001_chichi", 95)
     wait_and_click("001_chichi") // 2回目
     wait_and_click("002_training01")
     wait_and_click("003_go_to_village")
@@ -52,7 +52,7 @@ module village
     wait_and_click("031_テント")
     wait_and_click("032_財布")
     wait_and_click("033_遊ばない")
-    wait_and_click("034_一人で村を出る")
+    wait_and_click("034_一人で村を出る", 99.998)
   fend
 
   procedure wait_and_click(name, threshold=99.997)

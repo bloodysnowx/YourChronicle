@@ -73,7 +73,7 @@ procedure greed()
 
   for i = 0 TO 8
     for j = 0 TO 3
-      BTN(LEFT,CLICK,1144,399 + 31 * i,150) // 6-14つ目
+      BTN(LEFT,CLICK,1144,399 + 33 * i,150) // 6-14つ目
     next
     sleep(1)
   next
