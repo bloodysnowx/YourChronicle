@@ -1,8 +1,10 @@
 call common.uws
+common.ActivateYourChronicle()
 
 while true
   wait_and_click("01_start", 98)
   common.HealSquads()
+  sleep(0.5)
   wait_and_click("03_儀式")
   clickAstillB("07_聖なる儀式", "09_rank3x")
   common.CompleteQuests()
@@ -51,52 +53,52 @@ fend
 
 procedure greed()
   BTN(LEFT,CLICK,100,293,109) // ルーティン
-  sleep(1)
+  sleep(0.5)
   BTN(LEFT,CLICK,214,466,109) // 強欲
-  sleep(1)
+  sleep(0.5)
   for i = 0 TO 6
-    BTN(LEFT,CLICK,1144,232,150) // 1つ目
+    BTN(LEFT,CLICK,1144,232,100) // 1つ目
   next
-  sleep(1)
+  sleep(0.5)
 
   for i = 0 TO 2
     for j = 0 TO 3
-      BTN(LEFT,CLICK,1146,265 + 30 * i,150) // 2-4つ目
+      BTN(LEFT,CLICK,1146,265 + 30 * i,100) // 2-4つ目
     next
-    sleep(1)
+    sleep(0.5)
   next
 
   for i = 0 TO 1
-    BTN(LEFT,CLICK,1146,366,150) // 5つ目
+    BTN(LEFT,CLICK,1146,366,100) // 5つ目
   next
-  sleep(1)
+  sleep(0.5)
 
   for i = 0 TO 8
     for j = 0 TO 3
-      BTN(LEFT,CLICK,1144,399 + 33 * i,150) // 6-14つ目
+      BTN(LEFT,CLICK,1144,399 + 33 * i,100) // 6-14つ目
     next
-    sleep(1)
+    sleep(0.5)
   next
 
   for i = 0 TO 6
-    BTN(LEFT,CLICK,1150,692,150) // 15つ目
+    BTN(LEFT,CLICK,1150,692,100) // 15つ目
   next
-  sleep(1)
+  sleep(0.5)
   for i = 0 TO 6
-    BTN(LEFT,CLICK,1147,736,150) // 16つ目
+    BTN(LEFT,CLICK,1147,736,100) // 16つ目
   next
-  sleep(1)
+  sleep(0.5)
 fend
 
 procedure gluttony()
   BTN(LEFT,CLICK,100,294,94) // ルーティン
-  sleep(1)
-  BTN(LEFT,CLICK,199,432,156) // 暴食
-  sleep(1)
+  sleep(0.5)
+  BTN(LEFT,CLICK,199,432,100) // 暴食
+  sleep(0.5)
   for i = 0 TO 3
-    for j = 0 TO 7
-      BTN(LEFT,CLICK,1076,229 + 35 * i,150)
+    for j = 0 TO 15
+      BTN(LEFT,CLICK,1076,229 + 35 * i,75)
     next
-    sleep(1)
+    sleep(0.5)
   next
 fend
