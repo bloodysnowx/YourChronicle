@@ -1,88 +1,16 @@
-ActivateYourChronicle()
+call common.uws
 
-DIM i = 0
+common.ActivateYourChronicle()
 
 WHILE TRUE
-    // CrystalConvert(10)
-
-    IF i = 0 THEN
-        Sleep(1)
-        HealSquads()
-        Sleep(1)
-        CompleteQuests()
-        Sleep(1)
-        UpdateQuests()
-    ENDIF
-
-    SummonUnit(0)
-
-    Sleep(3)
-
-    FOR j = 0 TO 3
-        LevelUpUnit(j)
-        Sleep(5)
-    NEXT
-
-    Sleep(5)
-
-    i = (i + 1) MOD 10
+    Sleep(1)
+    common.HealSquads()
+    Sleep(1)
+    common.CompleteQuests()
+    Sleep(1)
+    common.UpdateQuests()
+    sleep(180)
 WEND
-
-PROCEDURE ActivateYourChronicle()
-    ACW(GETID("YourChronicle","UnityWndClass"),0,0,1419,923,0)
-    BTN(LEFT,CLICK,2003,1235,203)
-    MOUSEORG(GETID("YourChronicle","UnityWndClass"))
-FEND
-
-PROCEDURE UpdateQuests()
-    BTN(LEFT,CLICK,78,231,391) // パーティー選択
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,1127,204,328) // 更新ボタンクリック
-FEND
-
-PROCEDURE HealSquads()
-    BTN(LEFT,CLICK,78,231,391) // パーティー選択
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,780,249,188) // 1st 回復
-    Sleep(1)
-    BTN(LEFT,CLICK,779,366,110) // 2nd 回復
-    Sleep(1)
-    BTN(LEFT,CLICK,778,480,140) // 3rd 回復
-    Sleep(1)
-    BTN(LEFT,CLICK,780,591,109) // 4th 回復
-    Sleep(1)
-    BTN(LEFT,CLICK,780,700,109) // 5th 回復
-FEND
-
-PROCEDURE CompleteQuests()
-    BTN(LEFT,CLICK,78,231,391) // パーティー選択
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,730,249,188) // 1st 完了
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,729,366,110) // 2nd 完了
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,728,480,140) // 3rd 完了
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,720,591,109) // 4th 完了
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-    Sleep(1)
-    BTN(LEFT,CLICK,725,700,109) // 5th 完了
-    Sleep(1)
-    BTN(LEFT,CLICK,608,158,266) // クエスト選択
-FEND
 
 PROCEDURE SummonUnit(n)
     BTN(LEFT,CLICK,78,231,391) // パーティー選択
